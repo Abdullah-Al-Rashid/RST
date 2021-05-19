@@ -18,9 +18,11 @@ function numberToScreen (num) {
   }
 }
 
+// Perform operation on inputted integers
 document.getElementById('equal').addEventListener('click', result)
 function result () {
   const onscreen = (display.innerHTML)
-  // Perform operation on inputted integers
-  display.innerHTML = new Function('return ' + onscreen)();;
+  // Statment below prevents the linter from declining eval
+  /*jslint evil: true */
+  display.innerHTML = new Function('return ' + onscreen)();
 }
