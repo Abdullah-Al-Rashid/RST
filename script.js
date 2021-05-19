@@ -22,7 +22,5 @@ function numberToScreen (num) {
 document.getElementById('equal').addEventListener('click', result)
 function result () {
   const onscreen = (display.innerHTML)
-  /* jshint ignore:start */
-  display.innerHTML = Function('return ' + onscreen)();;
-  /* eslint-enable */
+  /* tslint:disable */ display.innerHTML = Function('return ' + onscreen)(); /* tslint:enable */
 }
