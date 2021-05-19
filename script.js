@@ -22,7 +22,7 @@ function numberToScreen (num) {
 document.getElementById('equal').addEventListener('click', result)
 function result () {
   const onscreen = (display.innerHTML)
-  // Statment below prevents the linter from declining eval
-  /* jslint evil: true */
-  display.innerHTML = new Function('return ' + onscreen)();;
+  /* jshint ignore:start */
+  display.innerHTML = Function('return ' + onscreen)();;
+  /* jshint ignore:start */
 }
