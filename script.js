@@ -8,9 +8,11 @@ function numberToScreen (num) {
   const button = num.target.innerHTML
   if (button === 'Del') {
     const screen = (screen.innerHTML)
+    const onscreen = (screen.innerHTML)
     screen.innerHTML = onScreen.slice(0, -1)
   } else if (button === 'AC') {
     const screen = (screen.innerHTML)
+    const onscreen = (screen.innerHTML)
     screen.innerHTML = onScreen.slice(0, -40)
   } else if (screen.innerHTML === '0') {
     screen.innerHTML = button
