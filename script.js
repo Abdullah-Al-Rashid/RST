@@ -22,5 +22,5 @@ function numberToScreen (num) {
 document.getElementById('equal').addEventListener('click', result)
 function result () {
   const onscreen = (display.innerHTML)
-  display.innerHTML = eval(onscreen)
+  display.innerHTML = eval(onscreen) // eslint-disable-line no-eval
 }
