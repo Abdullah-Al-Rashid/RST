@@ -15,7 +15,7 @@ function numberToScreen (num) {
   } else if (screen.innerHTML === '0') {
     screen.innerHTML = button
     // Add the pushed digit to the end
-    } else {
+  } else {
     screen.innerHTML += button
   }
 }
