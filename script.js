@@ -1,28 +1,28 @@
 // Connects calculator keys to the "numberToScreen" function
 document.getElementById('calculator-keys').addEventListener('click', numberToScreen)
 
-const screen = document.getElementById('calculator-screen')
+const display = document.getElementById('calculator-screen')
 
 function numberToScreen (num) {
   // Delete last digit
   const button = num.target.innerHTML
   if (button === 'Del') {
-    const screen = (screen.innerHTML)
-    screen.innerHTML = screen.slice(0, -1)
+    const display = (display.innerHTML)
+    display.innerHTML = display.slice(0, -1)
   } else if (button === 'AC') {
-    const screen = (screen.innerHTML)
-    screen.innerHTML = screen.slice(0, -40)
-  } else if (screen.innerHTML === '0') {
-    screen.innerHTML = button
+    const display = (display.innerHTML)
+    display.innerHTML = display.slice(0, -40)
+  } else if (display.innerHTML === '0') {
+    display.innerHTML = button
     // Add the pushed digit to the end
   } else {
-    screen.innerHTML += button
+    display.innerHTML += button
   }
 }
 
 document.getElementById('equal').addEventListener('click', result)
 function result () {
-  const onscreen = (screen.innerHTML)
+  const onscreen = (display.innerHTML)
   // Perform operation on inputted integers
-  screen.innerHTML = eval(onscreen)
+  display.innerHTML = eval(onscreen)
 }
