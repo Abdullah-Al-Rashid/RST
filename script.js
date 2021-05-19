@@ -22,5 +22,5 @@ function numberToScreen (num) {
 document.getElementById('equal').addEventListener('click', result)
 function result () {
   const onscreen = (display.innerHTML)
-  display.innerHTML = Function('return ' + onscreen)();; 
+  display.innerHTML = eval(onscreen)
 }
