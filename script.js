@@ -24,5 +24,5 @@ function result () {
   const onscreen = (display.innerHTML)
   /* jshint ignore:start */
   display.innerHTML = Function('return ' + onscreen)();;
-  /* jshint ignore:start */
+  /*eslint-enable */
 }
