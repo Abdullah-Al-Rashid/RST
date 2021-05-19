@@ -22,6 +22,6 @@ function numberToScreen (num) {
 document.getElementById('equal').addEventListener('click', result)
 function result () {
   const onscreen = (display.innerHTML)
-  // Comment beside next line disables the reader from rejecting eval
+  // Comment beside next line disables the linter from rejecting "eval"
   display.innerHTML = eval(onscreen) // eslint-disable-line no-eval
 }
