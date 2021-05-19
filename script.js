@@ -1,7 +1,7 @@
 // Connects calculator keys to the "numberToScreen" function
 document.getElementById('calculator-keys').addEventListener('click', numberToScreen)
 
-let screen = document.getElementById('calculator-screen')
+const screen = document.getElementById('calculator-screen')
 
 function numberToScreen (num) {
   // Delete last digit
@@ -22,7 +22,6 @@ function numberToScreen (num) {
 
 document.getElementById('equal').addEventListener('click', result)
 function result () {
-  const onscreen = (screen.innerHTML)
   // Perform operation on inputted integers
-  screen.innerHTML = eval(onscreen)
+  screen.innerHTML = eval(screen)
 }
