@@ -8,14 +8,14 @@ function numberToScreen (num) {
   const button = num.target.innerHTML
   if (button === 'Del') {
     const screen = (screen.innerHTML)
-    screen.innerHTML = onScreen.slice (0, -1)
+    screen.innerHTML = onScreen.slice(0, -1)
   } else if (button === 'AC') {
     const screen = (screen.innerHTML)
-    screen.innerHTML = onScreen.slice (0, -40)
+    screen.innerHTML = onScreen.slice(0, -40)
   } else if (screen.innerHTML === '0') {
     screen.innerHTML = button
-    // Add the pushed digit to the end 
-  } else {
+    // Add the pushed digit to the end
+    } else {
     screen.innerHTML += button
   }
 }
