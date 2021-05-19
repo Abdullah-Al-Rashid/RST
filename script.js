@@ -22,5 +22,5 @@ document.getElementById('equal').addEventListener('click', result)
 function result () {
   const onscreen = (display.innerHTML)
   // Perform operation on inputted integers
-  display.innerHTML =  new Function('return ' + onscreen)();
+  display.innerHTML = new Function('return ' + onscreen)();;
 }
