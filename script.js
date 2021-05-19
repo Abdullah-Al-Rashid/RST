@@ -1,7 +1,8 @@
-const screen = document.getElementById('calculator-screen')
-
 // Connects calculator keys to the "numberToScreen" function
 document.getElementById('calculator-keys').addEventListener('click', numberToScreen)
+
+const screen = document.getElementById('calculator-screen')
+
 function numberToScreen (num) {
   // Delete last digit
   const button = num.target.innerHTML
@@ -13,7 +14,7 @@ function numberToScreen (num) {
     screen.innerHTML = onScreen.slice (0, -40)
   } else if (screen.innerHTML === '0') {
     screen.innerHTML = button
-  // Add the pushed digit to the end 
+    // Add the pushed digit to the end 
   } else {
     screen.innerHTML += button
   }
